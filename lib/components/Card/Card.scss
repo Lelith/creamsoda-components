@@ -1,0 +1,39 @@
+@import '../../styles/themify';
+@import '../../styles/typography';
+
+.card {
+  padding: 25px;
+
+  &__headline {
+    font-size: $h3;
+    font-weight: $regular-weight;
+
+  }
+
+  &__meta {
+    @include themify($themes) {
+      color: themed('secondary');
+    }
+    font-size: $h4;
+  }
+
+  &__header {
+    @include themify($themes) {
+      border-bottom: themed('border');
+    }
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__footer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  &__button {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,96 @@
+@import '../../styles/themify';
+@import '../../styles/variables';
+
+.button {
+  @include themify($themes) {
+    color: themed('textcolor');
+    font-family: themed('fontFamily');
+  }
+  display: inline-block;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.1s, background-color 0.1s;
+  font-size: $small;
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    @include themify($themes) {
+      background-color: themed('primary');
+
+      &:hover,
+      &:active {
+        background-color: lighten(themed('primaryLight'), 10);
+      }
+    }
+  }
+
+  &--secondary,
+  &--cta {
+    @include themify($themes) {
+      color: themed('primary');
+      background-color: transparent;
+      border: solid 1px themed('primary');
+      box-shadow: none;
+    }
+  }
+
+  &--cta {
+    .button__label {
+      position: relative;
+      display: inline-block;
+      padding-right: 15px;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(50% - 5px);
+        right: -5px;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-width: 5px;
+        @include themify($themes) {
+          border-left-color: themed('primary');
+        }
+      }
+    }
+  }
+
+  &--icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include themify($themes) {
+      background-color: transparent;
+    }
+
+    .button__icon {
+      border-radius: 50%;
+      padding: 5px;
+      margin-bottom: 5px;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        @include themify($themes) {
+          fill: themed('primary');
+        }
+      }
+    }
+
+    &:hover,
+    &:active {
+      .button__label {
+        text-decoration: underline;
+      }
+    }
+  }
+}
