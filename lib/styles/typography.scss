@@ -3,7 +3,7 @@
 
 %headline {
   @include themify($themes) {
-    font-family: themed('fontFamily');
+    font-family: themed('headlineFont');
   }
   font-weight: $regular-weight;
 }
