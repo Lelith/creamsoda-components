@@ -25,7 +25,7 @@
 
       &:hover,
       &:active {
-        background-color: lighten(themed('primaryLight'), 10);
+        background-color: lighten(themed('primary'), 10);
       }
     }
   }
@@ -37,6 +37,13 @@
       background-color: transparent;
       border: solid 1px themed('primary');
       box-shadow: none;
+
+      &:hover,
+      &:active {
+        .button__label {
+          text-decoration: underline;
+        }
+      }
     }
   }
 

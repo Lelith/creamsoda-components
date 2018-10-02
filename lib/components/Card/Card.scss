@@ -5,9 +5,7 @@
   padding: 25px;
 
   &__headline {
-    font-size: $h3;
-    font-weight: $regular-weight;
-
+    @extend %headline;
   }
 
   &__meta {

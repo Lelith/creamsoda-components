@@ -16,7 +16,7 @@ const divStyle = {
   margin: '0 auto',
 };
 
-storiesOf('D3A/Molecules', module)
+storiesOf('CreamSoda/Molecules', module)
   .add(
     'Card',
     withInfo(`
@@ -26,7 +26,7 @@ storiesOf('D3A/Molecules', module)
         <Card>{children}</Card>
       ~~~
     `)(() => (
-      <ThemeProvider theme="d3a">
+      <ThemeProvider theme="soda">
         <div className="base" style={wrapperStyle}>
           <Card style={divStyle}>
             <Card.Header>
