@@ -16,7 +16,7 @@ const divStyle = {
   margin: '0 auto',
 };
 
-storiesOf('CreamSoda/Molecules', module)
+storiesOf('Soda/Molecules', module)
   .add(
     'Card',
     withInfo(`
@@ -27,7 +27,56 @@ storiesOf('CreamSoda/Molecules', module)
       ~~~
     `)(() => (
       <ThemeProvider theme="soda">
-        <div className="base" style={wrapperStyle}>
+        <div style={wrapperStyle}>
+          <Card style={divStyle}>
+            <Card.Header>
+              <Card.Headline>
+                My Second Card
+              </Card.Headline>
+            </Card.Header>
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+            amet. Lorem ipsum dolor si
+            t amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut l
+            abore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo
+            dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            <Card.Footer>
+              <Card.Button onClick={action('clicked')} label="Card Button" />
+            </Card.Footer>
+          </Card>
+          <Card style={divStyle}>
+            <Card.Header>
+              <Card.Headline>
+                Lorem ipsum dolor
+              </Card.Headline>
+              <Card.Meta>
+                erat, voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              </Card.Meta>
+            </Card.Header>
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+            amet. Lorem ipsum dolor si
+            t amet, consetetur sadipscing elitr, sed diam nonumy
+            <Card.Footer>
+              <Card.Button type="cta" onClick={action('clicked')} label="Card Button" />
+            </Card.Footer>
+          </Card>
+        </div>
+      </ThemeProvider>
+    )),
+  );
+storiesOf('Achtbit/Molecules', module)
+  .add(
+    'Card',
+    withInfo(`
+      Card molecule with Button
+
+      ~~~js
+        <Card>{children}</Card>
+      ~~~
+    `)(() => (
+      <ThemeProvider theme="achtbit">
+        <div style={wrapperStyle}>
           <Card style={divStyle}>
             <Card.Header>
               <Card.Headline>

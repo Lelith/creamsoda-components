@@ -7,23 +7,6 @@
   box-sizing: border-box;
 }
 
-%base {
-  @include themify($themes) {
-    background: themed('bgColor');
-    color: themed('text');
-    font-family: themed('bodyFont');
-  }
-
-  line-height: $default-lh;
-  font-size: $body;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.base {
-  @extend %base;
-}
-
 .isvg {
   display: flex;
   justify-content: center;
@@ -56,17 +39,4 @@ select {
 
 .small {
   font-size: $small;
-}
-
-.bigNumbers {
-  @include themify($themes) {
-    color: themed('textColor');
-  }
-  font-size: $big-text;
-}
-
-.highlighted {
-  @include themify($themes) {
-    color: themed('secondary');
-  }
 }

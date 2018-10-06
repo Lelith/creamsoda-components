@@ -3,10 +3,26 @@ $themes: (
     // Brand colors
     primary: #c5afe5, // brand
     secondary: #afe5e0, // second highlight
-    bgColor: #FEFEF6,
+    mainBG: #FEFEF6,
     textColor: #574d47,
-    border: (1px solid #7d7d7d),
+    buttonBorder: none,
+    buttonShadow: none,
+    boxBorder: (1px dashed #7d7d7d),
+    divider: (1px solid #7d7d7d),
     bodyFont: ("Arial, Helvetica", sans-serif),
     headlineFont: ("Spirax", cursive),
+  ),
+  achtbit: (
+    // Brand colors
+    primary: #92CD41, // brand
+    secondary: #afe5e0, // second highlight
+    mainBG: #7d7d7d url('../../images/achtbit.png') no-repeat fixed center,
+    textColor: #fff,
+    buttonBorder: (6px solid #000),
+    buttonShadow: none,
+    boxBorder: (6px solid #fff),
+    divider: (1px solid #7d7d7d),
+    bodyFont: ("Arial, Helvetica", sans-serif),
+    headlineFont: ("Press Start 2P", cursive),
   ),
 );

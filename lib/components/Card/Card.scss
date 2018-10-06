@@ -3,7 +3,9 @@
 
 .card {
   padding: 25px;
-
+  @include themify($themes) {
+    border: themed('boxBorder');
+  }
   &__headline {
     @extend %headline;
   }
@@ -17,7 +19,7 @@
 
   &__header {
     @include themify($themes) {
-      border-bottom: themed('border');
+      border-bottom: themed('divider');
     }
     padding-bottom: 20px;
     margin-bottom: 10px;

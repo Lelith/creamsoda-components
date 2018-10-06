@@ -1,1 +1,14 @@
 @import '../../styles/base';
+
+.base {
+  @include themify($themes) {
+    color: themed('textColor');
+    font-family: themed('bodyFont');
+    background: themed('mainBG');
+  }
+
+  line-height: $default-lh;
+  font-size: $body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
