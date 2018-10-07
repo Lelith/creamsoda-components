@@ -5,15 +5,15 @@
   @include themify($themes) {
     color: themed('textcolor');
     font-family: themed('fontFamily');
+    border: themed('formElementBorder');
+    border-radius: themed('borderRadius');
   }
   display: inline-block;
   padding: 12px 22px;
   border: 0;
-  border-radius: 2px;
   cursor: pointer;
   transition: color 0.1s, background-color 0.1s;
   font-size: $small;
-
   &[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
@@ -21,8 +21,8 @@
 
   &--primary {
     @include themify($themes) {
+      box-shadow: themed('formElementShadow') darken(themed('primary'), 10);
       background-color: themed('primary');
-
       &:hover,
       &:active {
         background-color: lighten(themed('primary'), 10);
@@ -33,10 +33,9 @@
   &--secondary,
   &--cta {
     @include themify($themes) {
-      color: themed('primary');
-      background-color: transparent;
-      border: solid 1px themed('primary');
-      box-shadow: none;
+      color: themed('buttonSecondaryColor');
+      background-color: themed('buttonSecondary');
+      box-shadow: themed('formElementShadow') darken(themed('buttonSecondary'), 10);
 
       &:hover,
       &:active {
@@ -64,7 +63,7 @@
         border: solid transparent;
         border-width: 5px;
         @include themify($themes) {
-          border-left-color: themed('primary');
+          border-left-color: themed('buttonSecondaryColor');
         }
       }
     }

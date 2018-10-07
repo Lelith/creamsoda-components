@@ -15,6 +15,10 @@ const divStyle = {
   maxWidth: '300px',
   margin: '0 auto',
 };
+const otherDivStyle = {
+  maxWidth: '450px',
+  margin: '0 auto',
+};  
 
 storiesOf('Soda/Molecules', module)
   .add(
@@ -77,7 +81,7 @@ storiesOf('Achtbit/Molecules', module)
     `)(() => (
       <ThemeProvider theme="achtbit">
         <div style={wrapperStyle}>
-          <Card style={divStyle}>
+          <Card style={otherDivStyle}>
             <Card.Header>
               <Card.Headline>
                 My Second Card

@@ -2,11 +2,15 @@ $themes: (
   soda: (
     // Brand colors
     primary: #c5afe5, // brand
-    secondary: #afe5e0, // second highlight
+    secondary: #7899e2, // second highlight
     mainBG: #FEFEF6,
     textColor: #574d47,
-    buttonBorder: none,
-    buttonShadow: none,
+    buttonSecondaryColor: #c5afe5,
+    borderRadius: 2px,
+    formElementBorder: (1px solid #c5afe5),
+    formElementShadow: none,
+    buttonSecondary: transparent,
+    boxBackground: #fff,
     boxBorder: (1px dashed #7d7d7d),
     divider: (1px solid #7d7d7d),
     bodyFont: ("Arial, Helvetica", sans-serif),
@@ -15,11 +19,15 @@ $themes: (
   achtbit: (
     // Brand colors
     primary: #92CD41, // brand
-    secondary: #afe5e0, // second highlight
+    secondary: #ef509e, // second highlight
     mainBG: #7d7d7d url('../../images/achtbit.png') no-repeat fixed center,
     textColor: #fff,
-    buttonBorder: (6px solid #000),
-    buttonShadow: none,
+    borderRadius: 0,
+    buttonSecondaryColor: #fff,
+    formElementBorder: (6px solid #000),
+    formElementShadow: (inset -4px -4px 0px 0px),
+    buttonSecondary: #ef509e,
+    boxBackground: #491389,
     boxBorder: (6px solid #fff),
     divider: (1px solid #7d7d7d),
     bodyFont: ("Arial, Helvetica", sans-serif),

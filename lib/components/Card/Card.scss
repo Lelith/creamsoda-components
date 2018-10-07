@@ -4,6 +4,7 @@
 .card {
   padding: 25px;
   @include themify($themes) {
+    background-color: themed('boxBackground');
     border: themed('boxBorder');
   }
   &__headline {
@@ -35,5 +36,13 @@
 
   &__button {
     align-self: flex-start;
+  }
+}
+
+.theme-achtbit {
+  .card {
+    &__button {
+      width: 100%;
+    }
   }
 }
